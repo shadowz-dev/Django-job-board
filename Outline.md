@@ -1,8 +1,8 @@
 Jobs:
-    - Title
-    - Location
-    - Job Type
-    - Job Description
+    - Title             done
+    - Location  
+    - Job Type          done
+    - Job Description   
     - Publish date
     - vacancy
     - Salary

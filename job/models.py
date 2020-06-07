@@ -21,10 +21,17 @@ class Job(models.Model): # talble
 #   location= 
     job_type = models.CharField(max_length=15 , choices=JOB_TYPE) # Text Field with choices
     description = models.TextField(max_length=1000) # Text field for big string fields 
-    publish_date = models.DateTimeField(auto_now=True)
+    publish_date = models.DateTimeField(auto_now=True) # Hidden field take creation date automatically 
     vacancy = models.IntegerField(default=1)
     salary = models.IntegerField(default=0)
     experience = models.IntegerField(default=1)
+    category = models.ForeignKey('category',on_delete=models.CASCADE)
 
-def __str__(self):  # change "Class object" definition to job title
-    self.title
+    def __str__(self):  # change "Class object" definition to job title
+        return self.title
+
+class category(models.Model):
+    name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name

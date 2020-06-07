@@ -30,3 +30,12 @@ home
 
 
 login
+
+
+
+
+Releations:
+
+    - One to Many : first one is related to Many [author - posts] Foreginkey
+    - Many to Many :                             [user - groups]  
+    - One to One :                               [user - profile]
